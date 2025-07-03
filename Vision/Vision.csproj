@@ -304,6 +304,7 @@
     <Compile Include="BaseClass\VisionConfig\SystemConfigData.cs" />
     <Compile Include="BaseClass\Module\Info.cs" />
     <Compile Include="BaseClass\XmlHelp.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="FrmMoveControl.cs">
       <SubType>Form</SubType>
     </Compile>
