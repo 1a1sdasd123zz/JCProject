@@ -453,7 +453,6 @@
       <DependentUpon>FrmSplash.cs</DependentUpon>
     </Compile>
     <Compile Include="BaseClass\GlobalValue.cs" />
-    <Compile Include="MoveControl\ControlBase\Class1.cs" />
     <Compile Include="MoveControl\ControlBase\MoveBase.cs" />
     <Compile Include="MoveControl\ControlBase\MovLeadShine.cs" />
     <Compile Include="MoveControl\LeadShine\DMC1000B.cs" />
