@@ -19,6 +19,7 @@ namespace Vision.MoveControl.ControlBase
     public delegate void degSendCommand(string command);
     public class MovLeadShine : MoveBase
     {
+        //最新版本
         public event degSendCommand eSendCommand;
 
         private static readonly Lazy<MovLeadShine> lazyInstance = new Lazy<MovLeadShine>(() => new MovLeadShine());
