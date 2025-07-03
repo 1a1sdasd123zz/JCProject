@@ -19,7 +19,6 @@ namespace Vision.MoveControl.ControlBase
     public delegate void degSendCommand(string command);
     public class MovLeadShine : MoveBase
     {
-        
         public event degSendCommand eSendCommand;
 
         private static readonly Lazy<MovLeadShine> lazyInstance = new Lazy<MovLeadShine>(() => new MovLeadShine());
@@ -31,7 +30,6 @@ namespace Vision.MoveControl.ControlBase
         public string[] StartIniInfos = new string[] { "Config", "StartPos" };
         public string[] AttachIniInfos = new string[] { "Config", "AttachPos" };
 
-        private int PaoLiaoCount = 0;
         //流程控制变量
         public string strPressStep = "启动";
         public string strMoveStep = "上料位";
