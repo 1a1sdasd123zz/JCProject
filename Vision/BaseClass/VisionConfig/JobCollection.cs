@@ -43,6 +43,19 @@ namespace Vision.BaseClass.VisionConfig
             }
         }
 
+        // 添加获取Explain的方法
+        public string CurrentExplain
+        {
+            get
+            {
+                return JobInfoColl.JobInfos[CurrentName].Explain;
+            }
+            set
+            {
+                JobInfoColl.JobInfos[CurrentName].Explain = value;
+            }
+        }
+
         public int Count => JobInfoColl.JobInfos.Count;
 
         public int LoadCount => Jobs.Count;

@@ -390,9 +390,14 @@ namespace Vision.MoveControl.ControlBase
                                             mJobData.mPosBase.RobotPosition.RobotZ[6],
                                             mJobData.mPosBase.RobotPosition.RobotA[6]))
                                     {
-                                        //破真空 
+                                        
                                         SetOutIO(ProductVacuo, 1);
-                                        Thread.Sleep(200);
+                                        Thread.Sleep(50);
+                                        //破真空 
+                                        SetOutIO(ProductVacuoON, 0);
+                                        await Task.Delay(200);
+                                        SetOutIO(ProductVacuoON, 1);
+
                                         strPressStep = "取料拍照位";
                                         break;
                                     }
@@ -605,9 +610,9 @@ namespace Vision.MoveControl.ControlBase
                                 {
                                     LogUtil.Log("真空破");
                                     SetOutIO(ProductVacuo, 1);
-                                    await Task.Delay(200);
-                                    SetOutIO(ProductVacuoON, 0);
                                     await Task.Delay(50);
+                                    SetOutIO(ProductVacuoON, 0);
+                                    await Task.Delay(200);
                                     SetOutIO(ProductVacuoON, 1);
                                     var poss = YamahaRobot.Instance.GetCurPos();
                                     if (await YamahaRobot.Instance.Move(double.Parse(poss[0]), double.Parse(poss[1]),

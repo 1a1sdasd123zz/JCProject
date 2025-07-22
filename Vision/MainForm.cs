@@ -121,7 +121,7 @@ public partial class MainForm : Form
                 frm_Splash.lbl_Splash.Text = "硬件加完成";
                 frm_Splash.lbl_Splash.Refresh();
                 mJobData.RegisterEvents();
-                toolStrip_JobNo.Text = $"型号：{mJobs.CurrentID}";
+                toolStrip_JobNo.Text = $"型号：{mJobs.CurrentExplain}";
             }
             else
             {
@@ -442,7 +442,7 @@ public partial class MainForm : Form
                 toolStrip_State.ForeColor = Color.Red;
             }
 
-            toolStrip_JobNo.Text = $"型号：{id}";
+            toolStrip_JobNo.Text = $"型号：{mJobs.CurrentExplain}";
         });
     }
 
@@ -681,19 +681,6 @@ public partial class MainForm : Form
 
     [DllImport("kernel32")]
     public static extern void GlobalMemoryStatus(ref MemoryInfo meminfo);
-
-
-    private void tool_Register_Click(object sender, EventArgs e)
-    {
-        FrmRegister frmRegister = new FrmRegister();
-        frmRegister.ShowDialog();
-    }
-
-    private void tool_Permission_Click_1(object sender, EventArgs e)
-    {
-        FrmPermission frmPermission1 = new FrmPermission();
-        frmPermission1.ShowDialog();
-    }
 
 
     private async void MainForm_FormClosing(object sender, FormClosingEventArgs e)
